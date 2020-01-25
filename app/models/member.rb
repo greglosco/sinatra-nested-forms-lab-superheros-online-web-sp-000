@@ -5,8 +5,8 @@ class Member
   
   def initialize (opts={})
     @name = opts[:name]
-    @bio = params[:bio]
-    @power = params[:power]
+    @bio = opts[:bio]
+    @power = opts[:power]
     @@all << self 
   end
   
