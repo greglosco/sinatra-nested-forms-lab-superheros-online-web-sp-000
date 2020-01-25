@@ -3,10 +3,10 @@ class Member
   
   @@all = []
   
-  def initialize (params)
-    @name = params[:name]
-    @bio = params[:bio]
-    @power = params[:power]
+  def initialize (params[:member])
+    @name = params[:member][:name]
+    @bio = params[:member][:bio]
+    @power = params[:member][:power]
     @@all << self 
   end
   
