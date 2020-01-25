@@ -6,7 +6,6 @@ class Team
   def initialize (opts={})
     @name = params[:name]
     @motto = params[:motto]
-    @@all << self 
   end
   
 end
