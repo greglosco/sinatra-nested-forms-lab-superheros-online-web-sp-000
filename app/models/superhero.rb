@@ -1,21 +1,18 @@
 class Superhero 
- attr_reader :name, :bio, :power 
-  
-  @@all = []
-  
-  def initialize (opts={})
-    @name = opts[:name]
-    @power = opts[:power]
-    @bio = opts[:bio]
-    @@all << self 
-  end
-  
+  attr_accessor :name, :power, :bio
+
   def self.all
-    @all
-  end
-  
-  def self.clear 
-    @@all.clear
+    @@all ||= []
   end
 
+  def initialize(opts={})
+    @name  = opts[:name]
+    @power = opts[:power]
+    @bio   = opts[:bio]
+    self.save
+  end
+
+  def save
+    self.class.all << self
+  end
 end
