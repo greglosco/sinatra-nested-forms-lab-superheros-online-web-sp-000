@@ -4,8 +4,8 @@ class Team
   @@all = []
   
   def initialize (opts={})
-    @name = params[:name]
-    @motto = params[:motto]
+    @name = opts[:name]
+    @motto = opts[:motto]
   end
   
 end
