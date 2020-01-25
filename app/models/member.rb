@@ -7,6 +7,7 @@ class Member
     @name = opts[:name]
     @bio = opts[:bio]
     @power = opts[:power]
+    @bio = opts[:bio]
     @@all << self 
   end
   
