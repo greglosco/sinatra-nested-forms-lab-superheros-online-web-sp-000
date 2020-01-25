@@ -1,4 +1,6 @@
 <%= @team.name %>
 <%= @team.motto %>
 
-
+<% @members.each do |member| %>
+  <%= member.name %>
+<% end %>
